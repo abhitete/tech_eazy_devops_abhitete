@@ -87,7 +87,7 @@ resource "aws_instance" "JavaApp_EC2" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.public.id
-  key_name               = var.key_name
+  key_name               = "techeazy"
   vpc_security_group_ids = [aws_security_group.instance_sg.id]
 
   # Run user_data script to auto-start app
